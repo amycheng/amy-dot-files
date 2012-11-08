@@ -1,0 +1,20 @@
+let mapleader= "," "change map leader to something easier on my fingers
+
+let g:tagbar_ctags_bin='/usr/local/Cellar/ctags/5.8/bin/ctags' "set location to where c-tags is actually
+
+"===file type detection==="
+au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
+au BufRead,BufNewFile .jquery.*.js set ft=javascript syntax=jquery
+au BufRead,BufNewFile *.dust set ft=html syntax=html
+
+if has("autocmd")
+  " When editing a file, always jump to the last cursor position
+  autocmd BufReadPost *
+  \ if line("'\"") > 0 && line ("'\"") <= line("$") |
+  \   exe "normal g'\"" |
+  \ endif
+endif
+
+"==disable Janus plugins I don't use==
+call janus#disable_plugin('ack.vim')
+call janus#disable_plugin('ack')

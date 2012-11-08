@@ -1,0 +1,56 @@
+"===Behind the scenes config===
+filetype plugin on "detect filetype
+set history=1000 "more undo steps
+runtime macros/matchit.vim "extend bracket matching to if, else
+
+"===GUI Customizations===
+color molokai
+set guifont=Source\ Code\ Pro:h14
+let NERDTreeShowBookmarks=1 "show list of bookmarks on load
+set fuopt=maxvert,maxhorz "make fullscreen mode actually go to fullscreen
+set nolist "don't show invisible characters
+set number "show line numbers
+set scrolloff=3 "more context around cursor
+set cursorline "show current line
+
+"===Key mappings===
+nnoremap ; :
+nnoremap <esc> :noh<return><esc>
+nnoremap <leader>w :vnew<return><esc>
+
+"===auto-close open brackets===
+inoremap {      {}<Left>
+inoremap {<CR>  {<CR>}<Esc>O
+inoremap {{     {
+inoremap {}     {}
+
+inoremap (      ()<Left>
+inoremap (<CR>  (<CR>)<Esc>O
+inoremap ((     (
+inoremap ()     ()
+
+inoremap [      []<Left>
+inoremap [<CR>  [<CR>]<Esc>O
+inoremap [[     [
+inoremap []     []
+
+inoremap <%      <%%><Right>
+inoremap <%<CR>  <%<CR>%><Esc>O
+
+"==making tabs pretty===
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+"==improving autocompletion
+set wildmenu
+set wildmode=list:longest
+
+"==plugin cusomatizations==
+let g:NERDCustomDelimiters = { 'dustjs': { 'left': '{!', 'right': '!}' } }
+
+"==disable Janus plugins I don't use==
+call janus#disable_plugin('ack.vim')
+
+
