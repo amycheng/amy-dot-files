@@ -18,16 +18,19 @@ nnoremap ; :
 nnoremap <esc> :noh<return><esc>
 nnoremap <leader>w :vnew<return><esc>
 
+"shortcut for substitute (search and replace)
+nmap S :%s/ 
+
 "===auto-close open brackets===
 inoremap {      {}<Left>
 inoremap {<CR>  {<CR>}<Esc>O
 inoremap {{     {
-inoremap {}     {}
+inoremap {}     {
 
 inoremap (      ()<Left>
 inoremap (<CR>  (<CR>)<Esc>O
-inoremap ((     (
 inoremap ()     ()
+inoremap ((     (
 
 inoremap [      []<Left>
 inoremap [<CR>  [<CR>]<Esc>O
@@ -36,6 +39,7 @@ inoremap []     []
 
 inoremap <%      <%%><Right>
 inoremap <%<CR>  <%<CR>%><Esc>O
+
 
 "==making tabs pretty===
 set tabstop=4
