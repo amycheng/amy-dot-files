@@ -19,7 +19,7 @@ nnoremap <esc> :noh<return><esc>
 nnoremap <leader>w :vnew<return><esc>
 
 "shortcut for substitute (search and replace)
-nmap S :%s/ 
+nmap S :%s/
 
 "===auto-close open brackets===
 inoremap {      {}<Left>
@@ -40,6 +40,14 @@ inoremap []     []
 inoremap <%      <%%><Right>
 inoremap <%<CR>  <%<CR>%><Esc>O
 
+"==keymappings for multiedit==
+"don't make these keys silent
+nmap <leader>md :MultieditClear<CR>
+nmap <leader>mr :MultieditReset<CR>
+
+"==keymappings for navigating splits==
+nmap <leader><left> :wincmd h <return> 
+nmap <leader><right> :wincmd l <return> 
 
 "==making tabs pretty===
 set tabstop=4
