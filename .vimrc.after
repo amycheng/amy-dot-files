@@ -65,4 +65,6 @@ let g:NERDCustomDelimiters = { 'dustjs': { 'left': '{!', 'right': '!}' } }
 "==disable Janus plugins I don't use==
 call janus#disable_plugin('ack.vim')
 
-
+"=save fold states="
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview 
