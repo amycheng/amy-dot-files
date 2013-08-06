@@ -21,6 +21,9 @@ nnoremap <leader>w :vnew<return><esc>
 "shortcut for substitute (search and replace)
 nmap S :%s/
 
+""==lorem ipsum text==
+nmap ipsum :Loremipsum!
+
 "===auto-close open brackets===
 inoremap {      {}<Left>
 inoremap {<CR>  {<CR>}<Esc>O
