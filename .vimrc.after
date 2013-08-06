@@ -22,7 +22,7 @@ nnoremap <leader>w :vnew<return><esc>
 nmap S :%s/
 
 ""==lorem ipsum text==
-nmap ipsum :Loremipsum!
+nmap <leader>ipsum :Loremipsum!
 
 "===auto-close open brackets===
 inoremap {      {}<Left>
