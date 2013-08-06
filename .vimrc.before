@@ -29,7 +29,4 @@ let g:multi_cursor_prev_key='<S-Left>'
 let g:multi_cursor_skip_key='<S-Down>'
 let g:multi_cursor_quit_key='<Esc>'
 
-"=save fold states="
-autocmd BufWinLeave *.* mkview
-autocmd BufWinEnter *.* silent loadview 
 
